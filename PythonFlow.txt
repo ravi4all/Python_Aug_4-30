@@ -1,0 +1,18 @@
+Core Python - Scripting
+Functional Programming
+Loosely typed - No data type, No semicolon
+Interpreted Language
+No compilation step
+
+If Else, Loops, Switch, Functions
+File Handling/CSV(Comma Sep Values)/xlsx/pdf/word
+Exception Handling
+
+Data Structures - Array(List), Tuples, Dictionary, Sets, FrozenSets
+
+Sorting/Search/Heap/Stack/Queue
+
+CRUD - Create Read Update Delete 
+Search/Sort
+
+Game Development - Pygame
