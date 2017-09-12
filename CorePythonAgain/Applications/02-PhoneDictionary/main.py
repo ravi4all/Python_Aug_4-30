@@ -1,33 +1,38 @@
 # from . import businessLogic as bl
 import businessLogic as bl
 
-mainLoop = True
-while mainLoop:
+def main():
 
-    print("""
-    1. Create
-    2. Read
-    3. Update
-    4. Delete
-    5. Search
-    6. Sort
-    7. Save
-    8. Load
-    9. Quit
-    """)
+    mainLoop = True
+    while mainLoop:
 
-    todo = {
-        "1" : bl.create,
-        "2" : bl.read,
-        "3" : bl.update,
-        "4" : bl.delete,
-        "5" : bl.search,
-        "6" : bl.sort,
-        "7" : bl.save,
-        "8" : bl.load,
-        "9" : quit
-    }
+        print("""
+        1. Create
+        2. Read
+        3. Update
+        4. Delete
+        5. Search
+        6. Sort
+        7. Save
+        8. Load
+        9. Quit
+        """)
 
-    user_ch = input("Enter your choice : ")
+        todo = {
+            "1" : bl.create,
+            "2" : bl.read,
+            "3" : bl.update,
+            "4" : bl.delete,
+            "5" : bl.search,
+            "6" : bl.sort,
+            "7" : bl.save,
+            "8" : bl.load,
+            "9" : quit
+        }
 
-    todo.get(user_ch)()
+        user_ch = input("Enter your choice : ")
+
+        todo.get(user_ch)()
+
+if __name__ == '__main__':
+    main()
