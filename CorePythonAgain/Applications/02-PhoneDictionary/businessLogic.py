@@ -56,7 +56,14 @@ def sort():
         print(s)
 
 def save():
-    pass
+    file = open("data.txt", 'a')
+    for d in userList:
+        file.write(str(d).strip("{}") + "\n")
+    print("Data inserted...")
+    file.close()
 
 def load():
-    pass
+    file = open("data.txt")
+    data = file.read()
+    print(data)
+    file.close()
