@@ -12,14 +12,14 @@ colors = [red,green,yellow,blue]
 
 col = random.choice(colors)
 
-width = 600
-height = 500
+width = 800
+height = 600
 
-speed = [2,2]
+speed = [20,20]
 
 screen = pygame.display.set_mode((width,height))
 
-screen.fill((255,255,255))
+img_1 = pygame.image.load("images/ball.jpg")
 
 pygame.display.update()
 
@@ -27,8 +27,10 @@ x = 50
 y = 50
 
 clock = pygame.time.Clock()
-FPS = 100
+FPS = 30
 while True:
+
+    screen.fill((255,255,255))
 
     for event in pygame.event.get():
 
@@ -38,17 +40,20 @@ while True:
 
     screen.fill((255,255,255))
 
-    pygame.draw.circle(screen, col, [x,y], 50)
+    # pygame.draw.circle(screen, col, [x,y], 50)
+    screen.blit(img_1, [x,y])
 
     x += speed[0]
     y += speed[1]
 
-    if x >= width - 50 or x <= 50:
+    if x >= width - 225 or x <= 0:
         speed[0] = -speed[0]
         col = random.choice(colors)
-    elif y >= height - 50 or y <= 50:
+        img_1 = pygame.transform.rotate(img_1, 90)
+    elif y >= height - 225 or y <= 0:
         speed[1] = -speed[1]
         col = random.choice(colors)
+        img_1 = pygame.transform.rotate(img_1, 90)
 
     pygame.display.update()
     clock.tick(FPS)
