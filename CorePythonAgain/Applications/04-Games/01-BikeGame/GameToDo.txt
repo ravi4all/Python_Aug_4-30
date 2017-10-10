@@ -1,0 +1,10 @@
+Splash Screen
+Include Soundtracks
+After pressing start button
+On Game screen
+- 3,2,1 Counter
+- untill counter is 0 cars will not move
+- Race start
+- 45 seconds timer
+- Finishing Line will come when 1 second will remain
+- After 0 seconds game over will appear on screen with name     of winner car
